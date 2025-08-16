@@ -1,0 +1,185 @@
+{
+  "apartments": [
+    {
+      "id": "apt-001",
+      "title": "3-комнатная №104",
+      "area": 63.1,
+      "floor": 1,
+      "totalFloors": 17,
+      "price": 6630500,
+      "rooms": 3
+    },
+    {
+      "id": "apt-002",
+      "title": "3-комнатная №105",
+      "area": 63.2,
+      "floor": 2,
+      "totalFloors": 17,
+      "price": 6650759,
+      "rooms": 3
+    },
+    {
+      "id": "apt-003",
+      "title": "3-комнатная №106",
+      "area": 63.2,
+      "floor": 3,
+      "totalFloors": 17,
+      "price": 6650759,
+      "rooms": 3
+    },
+    {
+      "id": "apt-004",
+      "title": "3-комнатная №107",
+      "area": 63.6,
+      "floor": 4,
+      "totalFloors": 17,
+      "price": 6671314,
+      "rooms": 3
+    },
+    {
+      "id": "apt-005",
+      "title": "3-комнатная №108",
+      "area": 63.1,
+      "floor": 5,
+      "totalFloors": 17,
+      "price": 6679554,
+      "rooms": 3
+    },
+    {
+      "id": "apt-006",
+      "title": "2-комнатная №201",
+      "area": 45.3,
+      "floor": 2,
+      "totalFloors": 17,
+      "price": 5850000,
+      "rooms": 2
+    },
+    {
+      "id": "apt-007",
+      "title": "2-комнатная №202",
+      "area": 47.8,
+      "floor": 3,
+      "totalFloors": 17,
+      "price": 6100000,
+      "rooms": 2
+    },
+    {
+      "id": "apt-008",
+      "title": "2-комнатная №203",
+      "area": 46.1,
+      "floor": 4,
+      "totalFloors": 17,
+      "price": 5950000,
+      "rooms": 2
+    },
+    {
+      "id": "apt-009",
+      "title": "4-комнатная №301",
+      "area": 89.5,
+      "floor": 3,
+      "totalFloors": 17,
+      "price": 8950000,
+      "rooms": 4
+    },
+    {
+      "id": "apt-010",
+      "title": "4-комнатная №302",
+      "area": 91.2,
+      "totalFloors": 17,
+      "price": 9200000,
+      "rooms": 4
+    },
+    {
+      "id": "apt-011",
+      "title": "1-комнатная №401",
+      "area": 35.7,
+      "floor": 4,
+      "totalFloors": 17,
+      "price": 5600000,
+      "rooms": 1
+    },
+    {
+      "id": "apt-012",
+      "title": "1-комнатная №402",
+      "area": 33.2,
+      "floor": 5,
+      "totalFloors": 17,
+      "price": 5500000,
+      "rooms": 1
+    },
+    {
+      "id": "apt-013",
+      "title": "3-комнатная №501",
+      "area": 68.9,
+      "floor": 5,
+      "totalFloors": 17,
+      "price": 7200000,
+      "rooms": 3
+    },
+    {
+      "id": "apt-014",
+      "title": "3-комнатная №502",
+      "area": 71.4,
+      "floor": 6,
+      "totalFloors": 17,
+      "price": 7450000,
+      "rooms": 3
+    },
+    {
+      "id": "apt-015",
+      "title": "2-комнатная №601",
+      "area": 52.3,
+      "floor": 6,
+      "totalFloors": 17,
+      "price": 6800000,
+      "rooms": 2
+    },
+    {
+      "id": "apt-016",
+      "title": "2-комнатная №602",
+      "area": 54.1,
+      "floor": 7,
+      "totalFloors": 17,
+      "price": 7000000,
+      "rooms": 2
+    },
+    {
+      "id": "apt-017",
+      "title": "4-комнатная №701",
+      "area": 95.6,
+      "floor": 7,
+      "totalFloors": 17,
+      "price": 9800000,
+      "rooms": 4
+    },
+    {
+      "id": "apt-018",
+      "title": "4-комнатная №702",
+      "area": 98.2,
+      "floor": 8,
+      "totalFloors": 17,
+      "price": 10200000,
+      "rooms": 4
+    },
+    {
+      "id": "apt-019",
+      "title": "1-комнатная №801",
+      "area": 38.9,
+      "floor": 8,
+      "totalFloors": 17,
+      "price": 5900000,
+      "rooms": 1
+    },
+    {
+      "id": "apt-020",
+      "title": "1-комнатная №802",
+      "area": 36.5,
+      "floor": 9,
+      "totalFloors": 17,
+      "price": 5750000,
+      "rooms": 1
+    }
+  ],
+  "total": 150,
+  "hasMore": true
+}
