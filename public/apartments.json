@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "3-комнатная №104",
+    "area": 63.1,
+    "floor": 1,
+    "price": 6630500,
+    "rooms": 3,
+    "image": "/img/flat-furniture.png"
+  },
+  {
+    "id": 2,
+    "title": "3-комнатная №105",
+    "area": 63.2,
+    "floor": 2,
+    "price": 6650759,
+    "rooms": 3,
+    "image": "/img/flat-furniture.png"
+  },
+  {
+    "id": 3,
+    "title": "3-комнатная №106",
+    "area": 63.2,
+    "floor": 3,
+    "price": 6650759,
+    "rooms": 3,
+    "image": "/img/flat-furniture.png"
+  }
+]
