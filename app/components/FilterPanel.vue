@@ -5,21 +5,8 @@
     aria-label="Фильтры поиска квартир"
   >
     <div class="filter-panel__content">
-      <header class="filter-panel__header">
-        <h2 class="filter-panel__title">Фильтры</h2>
-        <BaseButton
-          variant="text"
-          size="small"
-          @click="resetFilters"
-          aria-label="Сбросить все фильтры"
-        >
-          Сбросить параметры ✕
-        </BaseButton>
-      </header>
-
       <form class="filter-panel__form" @submit.prevent>
         <fieldset class="filter-panel__section">
-          <legend class="filter-panel__section-title">Количество комнат</legend>
           <RoomSelector
             v-model="localFilters.rooms"
             :options="roomOptions"
@@ -52,6 +39,15 @@
             @update:model-value="debouncedUpdate"
           />
         </fieldset>
+        <div>
+          <BaseButton
+            variant="text"
+            @click="resetFilters"
+            aria-label="Сбросить все фильтры"
+          >
+            Сбросить параметры <CloseIcon />
+          </BaseButton>
+        </div>
       </form>
     </div>
   </aside>
@@ -62,6 +58,7 @@ import type { FilterState } from "~/types";
 import BaseButton from "~/components/ui/BaseButton.vue";
 import RoomSelector from "~/components/ui/RoomSelector.vue";
 import RangeSlider from "~/components/ui/RangeSlider.vue";
+import CloseIcon from "~/components/icons/CloseIcon.vue";
 
 interface Props {
   filters: FilterState;
@@ -101,7 +98,7 @@ const debouncedUpdate = useDebounceFn(() => {
 
 // Format functions
 const formatPrice = (value: number): string => {
-  return (value / 1000000).toFixed(1).replace(".0", "") + " млн";
+  return new Intl.NumberFormat("ru-RU").format(value);
 };
 
 const formatArea = (value: number): string => {
@@ -143,9 +140,8 @@ function useDebounceFn<T extends (...args: any[]) => any>(
 
 <style lang="scss" scoped>
 .filter-panel {
-  background: $background;
-  border: 1px solid $border;
-  border-radius: $border-radius;
+  background: $secondary;
+  border-radius: $border-radius-xl;
   height: fit-content;
   position: sticky;
   top: $spacing-lg;
@@ -156,7 +152,7 @@ function useDebounceFn<T extends (...args: any[]) => any>(
   }
 
   &__content {
-    padding: $spacing-lg;
+    padding: $spacing-xl;
 
     @media (max-width: $desktop) {
       padding: $spacing-md;
@@ -188,7 +184,7 @@ function useDebounceFn<T extends (...args: any[]) => any>(
   &__form {
     display: flex;
     flex-direction: column;
-    gap: $spacing-xl;
+    gap: $spacing-lg;
 
     @media (max-width: $desktop) {
       gap: $spacing-lg;
@@ -202,10 +198,10 @@ function useDebounceFn<T extends (...args: any[]) => any>(
   }
 
   &__section-title {
-    font-size: $font-size-base;
-    font-weight: 600;
+    font-size: $font-size-sm;
+    font-weight: 400;
     color: $text-primary;
-    margin-bottom: $spacing-md;
+    margin-bottom: $spacing-sm;
     padding: 0;
   }
 }

@@ -104,7 +104,7 @@ const handleClick = (event: MouseEvent) => {
 
   &--outline {
     background-color: transparent;
-    color: $primary;
+    color: $text-primary;
     border-color: $border;
 
     &:hover:not(:disabled) {
@@ -119,7 +119,7 @@ const handleClick = (event: MouseEvent) => {
 
   &--text {
     background-color: transparent;
-    color: $primary;
+    color: $text-primary;
 
     &:hover:not(:disabled) {
       background-color: rgba($primary, 0.05);

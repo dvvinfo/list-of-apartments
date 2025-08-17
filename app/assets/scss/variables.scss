@@ -12,10 +12,12 @@ $mobile: 480px;
 $primary: #3EB57C;
 $primary-hover: #95D0A1;
 $secondary: linear-gradient(135deg, rgba(174, 228, 178, 0.3) 0%, rgba(149, 208, 161, 0.3) 100%);
+
 $secondary-color: #AEE4B2;
 $text-primary: #0B1739;
 $text-secondary: #6c757d;
 $border: rgba(11, 23, 57, 0.2);
+$input:  linear-gradient(0deg, #0B1739, #0B1739), #FF0000;
 $background: #ffffff;
 $card-shadow: rgba(0, 0, 0, 0.1);
 
@@ -24,10 +26,13 @@ $spacing-xs: 4px;
 $spacing-sm: 8px;
 $spacing-md: 16px;
 $spacing-lg: 24px;
-$spacing-xl: 32px;
+$spacing-xl: 40px;
+
+
 
 // Border radius
 $border-radius: 25px;
+$border-radius-xl:10px;
 $border-radius-md: 8px;
 $border-radius-small: 4px;
 

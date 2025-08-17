@@ -69,22 +69,22 @@ const selectRoom = (value: number | null) => {
 
   &__buttons {
     display: flex;
-    gap: $spacing-xs;
+    gap: $spacing-md;
     flex-wrap: wrap;
   }
 
   &__button {
-    padding: $spacing-sm $spacing-md;
     background-color: $background;
     color: $text-primary;
     border: 1px solid $border;
     border-radius: $border-radius;
     font-family: $font-family;
-    font-size: $font-size-sm;
+    font-size: $font-size-base;
     font-weight: 500;
     cursor: pointer;
     transition: $transition;
-    min-width: 48px;
+    width: 44px;
+    height: 44px;
     text-align: center;
 
     &:hover {

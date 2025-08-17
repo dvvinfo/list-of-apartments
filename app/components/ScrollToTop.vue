@@ -8,24 +8,16 @@
         aria-label="Вернуться наверх"
         @click="scrollToTop"
       >
-        <svg
-          class="scroll-to-top__icon"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          aria-hidden="true"
-        >
-          <polyline points="18,15 12,9 6,15"></polyline>
-        </svg>
+        <ArrrowIcon />
       </button>
     </Transition>
   </Teleport>
 </template>
 
 <script setup lang="ts">
+import ArrrowIcon from "~/components/icons/ArrrowIcon.vue";
 const isVisible = ref(false);
-const scrollThreshold = 300;
+const scrollThreshold = 100;
 
 const checkScrollPosition = () => {
   const scrollY = window.scrollY;
@@ -82,7 +74,7 @@ onUnmounted(() => {
   right: $spacing-lg;
   width: 48px;
   height: 48px;
-  background-color: $primary;
+  background-color: $primary-hover;
   color: white;
   border: none;
   border-radius: 50%;

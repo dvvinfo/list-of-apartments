@@ -1,13 +1,12 @@
 <template>
   <div class="apartments-page">
     <div class="container">
-      <header class="apartments-page__header">
-        <h1 class="apartments-page__title">Квартиры</h1>
-      </header>
-
       <div class="apartments-page__layout">
         <!-- Main Content -->
         <main class="apartments-page__main">
+          <header class="apartments-page__header">
+            <h1 class="apartments-page__title">Квартиры</h1>
+          </header>
           <ApartmentsTable
             :apartments="filteredApartments"
             :has-more="hasMoreToShow"
@@ -26,6 +25,7 @@
         />
       </div>
     </div>
+    <ScrollToTop/>
   </div>
 </template>
 
@@ -33,6 +33,7 @@
 import type { FilterState } from "~/types";
 import FilterPanel from "~/components/FilterPanel.vue";
 import ApartmentsTable from "~/components/ApartmentsTable.vue";
+import ScrollToTop from "~/components/ScrollToTop.vue"
 
 interface Apartment {
   id: number;
@@ -172,7 +173,7 @@ const loadMore = () => {
 <style lang="scss" scoped>
 .apartments-page {
   min-height: 100vh;
-  padding: 40px 0;
+  padding: 96px 80px;
 
   &__header {
     margin-bottom: 48px;
@@ -192,7 +193,7 @@ const loadMore = () => {
   &__layout {
     display: grid;
     grid-template-columns: 1fr 400px;
-    gap: 32px;
+    gap: 80px;
     align-items: start;
 
     @media (max-width: 1200px) {

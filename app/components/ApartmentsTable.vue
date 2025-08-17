@@ -102,7 +102,9 @@
           </td>
           <td class="table-cell">{{ apartment.area }}</td>
           <td class="table-cell">
-            <span class="">{{ apartment.floor }} <span class="floor-info">из 17</span></span>
+            <span class=""
+              >{{ apartment.floor }} <span class="floor-info">из 17</span></span
+            >
           </td>
           <td class="table-cell">
             <div class="price">{{ formatPrice(apartment.price) }}</div>
@@ -113,9 +115,7 @@
 
     <!-- Load More Button -->
     <div v-if="hasMore" class="load-more-section">
-      <button class="load-more-btn" @click="$emit('loadMore')">
-        Загрузить ещё
-      </button>
+      <BaseButton variant="outline" @click="$emit('loadMore')">Загрузить ещё</BaseButton>
     </div>
   </div>
 </template>
@@ -123,6 +123,7 @@
 <script setup lang="ts">
 import FilterArrowUpIcon from "~/components/icons/FilterArrowUpIcon.vue";
 import FillterArrowDownIcon from "~/components/icons/FillterArrowDownIcon.vue";
+import BaseButton from "~/components/ui/BaseButton.vue"
 
 interface Apartment {
   id: number;
@@ -182,7 +183,6 @@ const formatPrice = (price: number) => {
   &.sortable {
     cursor: pointer;
     user-select: none;
-
   }
 }
 
@@ -190,7 +190,7 @@ const formatPrice = (price: number) => {
   display: flex;
   align-items: center;
   gap: 8px;
-  &:hover{
+  &:hover {
     color: $primary;
   }
 }
@@ -206,7 +206,7 @@ const formatPrice = (price: number) => {
   opacity: 0.4;
   transition: opacity 0.2s ease;
   height: 4px;
-  
+
   &:hover {
     opacity: 0.7;
   }
@@ -268,8 +268,6 @@ const formatPrice = (price: number) => {
   color: $text-primary;
 }
 
-
-
 .floor-info {
   color: $text-secondary;
   font-size: 16px;
@@ -282,23 +280,8 @@ const formatPrice = (price: number) => {
 }
 
 .load-more-section {
-  padding: 24px;
-  text-align: center;
+  padding-top: 48px;
   border-top: 1px solid #e9ecef;
-}
-
-.load-more-btn {
-  padding: 12px 24px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-
-  &:hover {
-    background: #0056b3;
-  }
 }
 
 // Responsive
