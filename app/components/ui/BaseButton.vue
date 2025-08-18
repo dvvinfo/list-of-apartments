@@ -85,7 +85,7 @@ const handleClick = (event: MouseEvent) => {
     }
 
     &:active:not(:disabled) {
-      background-color: darken($primary, 10%);
+      background-color: $primary;
     }
   }
 
@@ -94,11 +94,11 @@ const handleClick = (event: MouseEvent) => {
     color: $text-primary;
 
     &:hover:not(:disabled) {
-      background-color: darken($secondary-color, 5%);
+      background-color: $secondary;
     }
 
     &:active:not(:disabled) {
-      background-color: darken($secondary-color, 10%);
+      background-color: $secondary-color;
     }
   }
 

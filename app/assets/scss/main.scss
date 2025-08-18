@@ -29,7 +29,6 @@ body {
 .container {
   max-width: $max-width;
   margin: 0 auto;
-  padding: 0 $spacing-md;
   
   @media (min-width: $desktop) {
     padding: 0 ;
@@ -90,7 +89,7 @@ input, select {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: lighten($text-secondary, 20%);
+  background: $text-secondary;
   border-radius: 4px;
   
   &:hover {

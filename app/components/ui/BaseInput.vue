@@ -195,7 +195,7 @@ const handleInput = (event: Event) => {
       cursor: not-allowed;
 
       &::placeholder {
-        color: lighten($text-secondary, 20%);
+        color: $text-secondary;
       }
     }
   }

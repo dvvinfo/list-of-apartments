@@ -34,7 +34,7 @@ const scrollToTop = () => {
 
 // Throttle function for performance
 const throttle = (func: Function, delay: number) => {
-  let timeoutId: number | null = null;
+  let timeoutId: ReturnType<typeof setTimeout> | null = null;
   let lastExecTime = 0;
 
   return function (this: any, ...args: any[]) {

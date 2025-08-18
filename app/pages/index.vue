@@ -4,10 +4,11 @@
       <div class="apartments-page__layout">
         <!-- Main Content -->
         <main class="apartments-page__main">
-          <header class="apartments-page__header">
+          <div class="apartments-page__header show-title">
             <h1 class="apartments-page__title">Квартиры</h1>
-          </header>
+          </div>
           <ApartmentsTable
+            class="apartments-page__table"
             :apartments="filteredApartments"
             :has-more="hasMoreToShow"
             :sort-field="sortField"
@@ -18,14 +19,22 @@
         </main>
 
         <!-- Filter Panel -->
-        <FilterPanel
-          :filters="filterState"
-          :loading="false"
-          @update:filters="updateFilters"
-        />
+        <div class="apartments-page__filter">
+          <div class="apartments-page__header show">
+            <h2 class="apartments-page__title">Квартиры</h2>
+          </div>
+
+          <ClientOnly>
+            <FilterPanel
+              :filters="filterState"
+              :loading="false"
+              @update:filters="updateFilters"
+            />
+          </ClientOnly>
+        </div>
       </div>
     </div>
-    <ScrollToTop/>
+    <ScrollToTop />
   </div>
 </template>
 
@@ -33,7 +42,7 @@
 import type { FilterState } from "~/types";
 import FilterPanel from "~/components/FilterPanel.vue";
 import ApartmentsTable from "~/components/ApartmentsTable.vue";
-import ScrollToTop from "~/components/ScrollToTop.vue"
+import ScrollToTop from "~/components/ScrollToTop.vue";
 
 interface Apartment {
   id: number;
@@ -174,11 +183,16 @@ const loadMore = () => {
 .apartments-page {
   min-height: 100vh;
   padding: 96px 80px;
+  @media (max-width: $desktop) {
+    padding: 54px 48px;
+  }
 
   &__header {
     margin-bottom: 48px;
-
-    @media (max-width: 768px) {
+    @media (max-width: $desktop) {
+      margin-bottom: 24px;
+    }
+    @media (max-width: $tablet) {
       margin-bottom: 24px;
       text-align: left;
     }
@@ -196,30 +210,47 @@ const loadMore = () => {
     gap: 80px;
     align-items: start;
 
-    @media (max-width: 1200px) {
-      grid-template-columns: 280px 1fr;
+    @media (max-width: $desktop) {
+      grid-template-columns: 1fr 318px;
       gap: 24px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: $tablet) {
       grid-template-columns: 1fr;
-      gap: 0;
+      gap: 24px;
     }
   }
 
   &__main {
     min-height: 400px;
+
+    @media (max-width: $tablet) {
+      order: 2;
+    }
+  }
+
+  &__filter {
+    @media (max-width: $tablet) {
+      order: 1;
+      margin-bottom: 24px;
+    }
   }
 }
-
-// Responsive
-@media (max-width: 768px) {
-  .apartments-page {
-    padding: 20px 0;
-
-    &__layout {
-      display: block;
-    }
+.show {
+  display: none;
+  @media (max-width: $desktop) {
+    display: none;
+  }
+  @media (max-width: $tablet) {
+    display: block;
+  }
+}
+.show-title {
+  @media (max-width: $desktop) {
+    display: block;
+  }
+  @media (max-width: $tablet) {
+    display: none;
   }
 }
 </style>
